@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Smart Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') window.location.href = 'login.html';
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">WUB CSE</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Dashboard</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="progress.html">Progress</a></li>
+            <li><a href="#" class="logout-btn" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome, Sakhwat Hossen</h1>
+        <p>Section: 67/D | Group: 07</p> 
+        
+        <div class="stats-grid" style="margin-top: 20px;">
+            <div class="stat-card">
+                <h3>Reg. Status</h3>
+                <p style="color: #f1c40f; font-weight:bold;">Pending Advisor Approval</p> 
+            </div>
+            <div class="stat-card">
+                <h3>Standing</h3>
+                <p class="stat-value">Good</p>
+            </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+            <div class="stat-card">
+                <h3>New Registration</h3>
+                <p>Register for upcoming semester courses.</p>
+                <a href="catalog.html" class="btn-primary" style="display:block; text-decoration:none; margin-top:10px;">Open Catalog</a>
+            </div>
+            <div class="stat-card">
+                <h3>Academic Progress</h3>
+                <p>View your completed credits and GPA.</p>
+                <a href="progress.html" class="btn-primary" style="display:block; text-decoration:none; margin-top:10px; background:#9b59b6;">View Progress</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
