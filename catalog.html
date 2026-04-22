@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog | Smart Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Course Catalog</h2>
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Course Name</th>
+                <th>Prerequisite</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>CSE 1101</td>
+                <td>Structured Programming</td>
+                <td>None</td>
+                <td><button class="btn-primary" style="background:#27ae60;" onclick="alert('Requested!')">Register</button></td>
+            </tr>
+            <tr class="locked">
+                <td>CSE 2101</td>
+                <td>Data Structures</td>
+                <td>CSE 1101</td>
+                <td><button disabled style="background:#bdc3c7; cursor:not-allowed;">Locked</button></td>
+            </tr>
+        </table>
+        <a href="index.html">Back to Dashboard</a>
+    </div>
+</body>
+</html>
